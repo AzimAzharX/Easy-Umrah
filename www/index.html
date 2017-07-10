@@ -15,9 +15,12 @@
           .catch(err => console.log('Error', err));
       }
     </script>-->
-
+    <!-- Latest compiled and minified CSS -->
+   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     -->
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 <!--     <link href="animate.min.css" rel="stylesheet">
     <link href="animate.css" rel="stylesheet"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" >
@@ -41,6 +44,8 @@
     <script src="lib/checklist-model/checklist-model.js"></script>
     <script src="lib/moment-hijri/moment-hijri.js"></script>
     <script src="lib/angular-moment/angular-moment.js"></script>
+ <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     
    
   </head>
@@ -59,7 +64,7 @@
 
               <!--HOME-->
               <script type="text/ng-template" id="fyp.html">
-                <ion-view view-title="UMRAH">
+                <ion-view view-title="EASY UMRAH">
                    <ion-content class="fyp-content">
 
                    <div ng-controller="fypCtrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"> 
@@ -72,8 +77,13 @@
                    <br>
                     <!-- <span align="center" style="font-size: 1.5em"><b>SELAMAT DATANG KE APPS UMRAH</b></span> -->
                    <!-- <img src="img/mecca.jpg" class="img2"> -->
-                   <img src="img/icon.png" class="img animated fadeInDown" ng-click="goToMenu()" >
+                   <img src="img/kaabah.gif" class="imgKaabah animated fadeInDown" ng-click="goToMenu()" >
                   <br>
+                  <img src="img/ihram3.jpg" class="imgIhram animated bounceInUp" ng-click="goToMenu7()" >
+                  <img src="img/tawaf3.jpg" class="imgTawaf animated bounceInDown" ng-click="goToMenu8()" >
+                  <img src="img/saie2.jpg" class="imgSaie animated bounceInDown" ng-click="goToMenu9()" >
+                  <img src="img/cukur.jpg" class="imgCukur animated bounceInDown" ng-click="goToMenu10()" >
+                    
                    </ion-content>
                 </ion-view>
               </script>
@@ -84,7 +94,7 @@
               <ion-view view-title="MENU">
               
                  <ion-content class="fyp-content" padding>
-                   <div ng-controller="fypCtrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"> 
+                   <div ng-controller="fypCtrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ;  padding: 20px; color: #31033A;">  <!-- opacity:0.6; filter: alpha(opacity=60); -->
                    <span style="font-size: 1.8em"><b>{{exampleDate}}</b></span>
                    <br>
                    <span style="font-size: 1.5em"><b>{{date}}</b></span>
@@ -206,16 +216,19 @@
               </label>
               <br>
               <ion-list>
+              <div class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"><span style="font-size: 1.2em; color: black; "><b>Pilih tempat miqat anda</b></span></div>
               <div class="ion-list animated bounceInLeft">
                 <ion-radio ng-model="tempat_stop" ng-value="1">Bir Ali</ion-radio>
                 <ion-radio ng-model="tempat_stop" ng-value="2">Tanaim</ion-radio>
                 <ion-radio ng-model="tempat_stop" ng-value="3">Hudaibiah</ion-radio>
                 <ion-radio ng-model="tempat_stop" ng-value="4">Ja'ranah</ion-radio>
+                <ion-radio ng-model="tempat_stop" ng-value="5">Qarnul Manazil</ion-radio>
+
               </div>
               </ion-list>
               <br>
               <center>
-              <button class="button button-dark" ng-click="checkAll()">Check all</button>
+              <!-- <button class="button button-dark" ng-click="checkAll()">Check all</button> -->
               <button class="button button-balanced" ng-click="mula()" ui-sref="tawaf" ng-disabled="checked()"><b>MULA</b></button>
               <button class="button button-assertive" ng-click="uncheckAll()">SET SEMULA</button>
               <br><br>
@@ -253,7 +266,7 @@
               </label>
               <br>
               <CENTER>              
-              <button class="button button-dark" ng-click="checkAll()">Check all</button>
+              <!-- <button class="button button-dark" ng-click="checkAll()">Check all</button> -->
               <button class="button button-balanced" ng-click="mula()" ui-sref="saie" ng-disabled="checked()"><b>MULA</b></button>
               <button class="button button-assertive" ng-click="uncheckAll()">SET SEMULA</button>
               </CENTER>
@@ -289,7 +302,7 @@
               </label>
               <br>
               <CENTER>
-              <button class="button button-dark" ng-click="checkAll()">Check all</button>
+              <!-- <button class="button button-dark" ng-click="checkAll()">Check all</button> -->
               <button class="button button-balanced" ng-click="mula()" ui-sref="post" ng-disabled="checked()"><b>MULA</b></button>
               <button class="button button-assertive" ng-click="uncheckAll()">SET SEMULA</button>
               </CENTER>
@@ -323,8 +336,8 @@
               </label>
              <br>
              <CENTER>
-              <button class="button button-dark" ng-click="checkAll()">Check all</button>
-              <button class="button button-balanced" ng-click="ticked()" ng-disabled="checked()"><b>CHECK</b></button>
+              <!-- <button class="button button-dark" ng-click="checkAll()">Check all</button> -->
+              <button class="button button-balanced" ng-click="ticked()" ng-disabled="checked()"><b>Periksa</b></button>
               <button class="button button-assertive" ng-click="uncheckAll()">Reset</button>
               </CENTER>
               <br><br>
@@ -348,7 +361,7 @@
              <div ng-controller="damListCtrl">
 <!--                 {{checked}}  
                 Dam: --> 
-                <div align="center" style="background-color: #B13BAE; padding: 20px; color: white;" ng-repeat="dam in result"><span style="font-size: 1.2em">{{dam}}</span></div>
+                <div class="dam animated zoomInUp" align="center" style="background-color: #B13BAE; padding: 20px; color: white;" ng-repeat="dam in result"><span style="font-size: 1.2em">{{dam}}</span></div>
 <!--                 Penjelasan: 
                 <div ng-repeat="dam in result">{{damDesc}}</div> -->
 
@@ -357,14 +370,168 @@
              </ion-content>
           </ion-view>
             </script>
+            
+            <!-- Ihram 2 -->
+            <script type="text/ng-template" id="ihram2.html">
+             <ion-view view-title="IHRAM">
+             <ion-content class="fyp-content" padding>
+                   <div ng-controller="ihram2Ctrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"> 
+                   <span style="font-size: 1.8em"><b>{{exampleDate}}</b></span>
+                   <br>
+                   <span style="font-size: 1.5em"><b>{{date}}</b></span>
+                   <br>
+                   <span style="font-size: 1.3em"><b>{{hijri}}</b></span>
+                   </div>
+                   <br> 
+              <div style="background-color: #456F87;color white; padding: 20px; font-family:  ">
+              
+              <span style="font-size: 2.0em; color: white;"><b>Ihram Bagi Lelaki</b></span>
+              <br>
+              <br>
+              <img src="img/caraIhram.jpg" class="imgCaraIhram animated bounce">
+              <br>
+              <span style="font-size: 2.0em; color: white; "><b>Ihram Bagi Wanita</b></span>
+              <br><br>
+              <img src="img/ihramWanita.gif" class="imgIhramWanita animated bounceInLeft">
+              <br>
+              <span style="font-size: 2.0em; color: white; "><b>Niat Ihram</b></span>
+              <br><br>
+              <img src="img/niatUmrah.png" class="imgCaraIhram animated bounceInLeft">
+              <br><br>
+              <span style="font-size: 2.0em; color: white; "><b>Niat Ihram Bersyarat</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Bagi wanita uzur yang jangkaan haidhnya tidak menentu sementara ia akan tinggal tidak lama di Mekah dan mungkin tidak sempat berumrah, maka seeloknya ia berniat ihram umrah bersyarat.</span>
+              <img src="img/niatBersyarat.jpg" class="imgCaraIhram animated bounceInLeft">
+              <br>
+              <span style="font-size: 2.0em; color: white; "><b>Talbiyah</b></span><br>
+              <span style="font-size: 1.3em; color: white; ">Selesai berniat umrah di miqat, para jemaah disunatkan untuk bertalbiyah disepanjang perjalanan menuju ke Mekah</span>
+              <img src="img/talbiyah.png" class="imgCaraIhram animated bounceInLeft">
+              </div>
+
+             </ion-content>
+          </ion-view>
+            </script>
+
+            <!-- Tawaf 2 -->
+            <script type="text/ng-template" id="tawaf2.html">
+             <ion-view view-title="TAWAF">
+             <ion-content class="fyp-content" padding>
+                   <div ng-controller="tawaf2Ctrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"> 
+                   <span style="font-size: 1.8em"><b>{{exampleDate}}</b></span>
+                   <br>
+                   <span style="font-size: 1.5em"><b>{{date}}</b></span>
+                   <br>
+                   <span style="font-size: 1.3em"><b>{{hijri}}</b></span>
+                   </div>
+                   <br> 
+             <div style="background-color: #456F87;color white; padding: 20px; font-family:  ">
+              
+              <span style="font-size: 2.0em; color: white;"><b>Panduan Tawaf</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Tawaf dimulakan dari garisan Hajarul Aswad dengan mengangkat tangan kanan melambai-lambai kerarah Kaabah</span>
+              <br>
+              <img src="img/modelTawaf.png" class="imgCaraIhram animated bounce">
+              <br>
+              <span style="font-size: 2.0em; color: white; "><b>Ittiba'</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Jemaah lelaki disunatkan untuk berittiba'</span>
+              <br>
+              <img src="img/ittiba.jpg" class="imgIhramWanita animated bounceInLeft">
+              <br>
+              <span style="font-size: 2.0em; color: white; "><b>Doa antara Rukun</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Disunatkkan untuk melambai di Rukun Yamani dan membaca doa ini sehingga di Rukun Hajarul Aswad</span>
+              <br>
+              <img src="img/doaRukun.jpg" class="imgCaraIhram animated bounceInLeft">
+              <br><br>
+              <span style="font-size: 2.0em; color: white; "><b>Solat Sunat Tawaf</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Setelah selesai tawaf, maka disunatkan untuk menunaikan solat sunat 2 rakaat tawaf dan disunatkan didirikan di belakang Maqam Ibrahim</span>
+              <br>
+              <span style="font-size: 1.3em; color: white; "></span>
+              <img src="img/niatSolatTawaf.jpg" class="imgCaraIhram animated bounceInLeft">
+              <br>
+              <img src="img/doaSolatTawaf.jpg" class="imgCaraIhram animated bounceInLeft">
+              <br>
+              </div>
+            </ion-content>
+          </ion-view>
+            </script>
+
+             <!-- Saie 2 -->
+            <script type="text/ng-template" id="saie2.html">
+             <ion-view view-title="SAIE">
+             <ion-content class="fyp-content" padding>
+                   <div ng-controller="saie2Ctrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"> 
+                   <span style="font-size: 1.8em"><b>{{exampleDate}}</b></span>
+                   <br>
+                   <span style="font-size: 1.5em"><b>{{date}}</b></span>
+                   <br>
+                   <span style="font-size: 1.3em"><b>{{hijri}}</b></span>
+                   </div>
+                   <br> 
+             <div style="background-color: #456F87;color white; padding: 20px; font-family:  ">
+              
+              <span style="font-size: 2.0em; color: white;"><b>Panduan Saie</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Saie dimulakan dari Bukit Safa sehingga ke Marwah sebanyak 7 kali</span>
+              <br>
+              <img src="img/safa.jpg" class="imgCaraIhram animated bounce">
+              <br>
+              <span style="font-size: 1.8em; color: white; "><b>Sunat Berlari Anak Antara Lampu Hijau</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Jemaah lelaki disunatkan untuk berlari anak diantara 2 lampu@garisan hijau dengan bacaan doa berikut</span>
+              <br>
+              <img src="img/doaLampuHijau.jpg" class="imgIhramWanita animated bounceInLeft">
+              <br>
+              <span style="font-size: 1.8em; color: white; "><b>Doa ketika mendaki Bukit Safa atau Marwah</b></span>
+              <br>
+              <br>
+              <img src="img/doaSafa.png" class="imgCaraIhram animated bounceInLeft">
+              <br><br>
+              <span style="font-size: 2.0em; color: white; "><b>Doa Tamat Saie</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Setelah selesai saie pusingan ketujuh di Marwah, bertakbirlah 3 kali dan berdoa</span>
+              <br>
+              <img src="img/doaTamatSaie.jpg" class="imgCaraIhram animated bounceInLeft">
+              <br>
+              <br>
+              </div>
+            </ion-content>
+          </ion-view>
+            </script>
 
 
+            <!-- Cukur 2 -->
+            <script type="text/ng-template" id="cukur2.html">
+             <ion-view view-title="BERGUNTING/BERCUKUR">
+             <ion-content class="fyp-content" padding>
+                   <div ng-controller="cukur2Ctrl" class="jam animated bounceInLeft" align="center" style="background-color: #00FF87 ; padding: 20px; color: #31033A;"> 
+                   <span style="font-size: 1.8em"><b>{{exampleDate}}</b></span>
+                   <br>
+                   <span style="font-size: 1.5em"><b>{{date}}</b></span>
+                   <br>
+                   <span style="font-size: 1.3em"><b>{{hijri}}</b></span>
+                   </div>
+                   <br> 
+              <div style="background-color: #456F87;color white; padding: 20px; font-family:  ">
+              <span style="font-size: 2.0em; color: white;"><b>Bergunting/Bercukur</b></span>
+              <br>
+              <span style="font-size: 1.3em; color: white; ">Setelah selesai saie, jemaah seterusnya akan bergunting dengan memotong beberapa helai rambut</span>
+              <br>
+              <img src="img/doaCukur.jpg" class="imgCaraIhram animated bounce">
+              <br>
+              <span style="font-size: 1.8em; color: white; "><b>Sunat Bercukur Bagi Lelaki</b></span>
+              <br>
+              <br>
+              <img src="img/cukurLelaki.jpg" class="imgIhramWanita animated bounceInLeft">
+              <br>
+              </div>
 
+           </ion-content>
+          </ion-view>
+            </script>
 
-
-
-<!--       <div class ="bar bar-footer bar-royal">
-      <div class= "title">Umrah &copy; 2017</div> -->
       </div>
 
     </ion-pane>

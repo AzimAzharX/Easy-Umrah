@@ -65,6 +65,26 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'damCtrl',
       params:{'checked':null}
      });
+     $stateProvider.state('ihram2', {
+      url: 'ihram2',
+      templateUrl: 'ihram2.html',
+      controller: 'ihram2Ctrl'
+     });
+      $stateProvider.state('tawaf2', {
+      url: 'tawaf2',
+      templateUrl: 'tawaf2.html',
+      controller: 'tawaf2Ctrl'
+     });
+      $stateProvider.state('saie2', {
+      url: 'saie2',
+      templateUrl: 'saie2.html',
+      controller: 'saie2Ctrl'
+     });
+      $stateProvider.state('cukur2', {
+      url: 'cukur2',
+      templateUrl: 'cukur2.html',
+      controller: 'cukur2Ctrl'
+     });
 
     $urlRouterProvider.otherwise('/');
 });

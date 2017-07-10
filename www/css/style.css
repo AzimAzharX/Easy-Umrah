@@ -1,29 +1,68 @@
 /* Empty. Add your own CSS if you like */
 .fyp-content {
-    background: #05F1FF;
-    
+    background: #FEFEFE;
+    background-image: url('../img/back2.png');
 }
 
 .icon {
+    /*color: white;*/
    font-size: 50px;
     margin-left: auto;
     margin-right: auto;
-
-
 }
-.img {
+
+.imgKaabah {
+    border-radius: 50%;
     display: block;
     margin: 0 auto;
     width : 50% ; 
     height : 30%
 }
-/*.img2{
-	display: block;
+.imgIhram{
+    display: block;
     margin: 0 auto;
-    width : 90% ; 
+    width: 100%;
+    height: 30%;
+}
+.imgTawaf{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 30%;
+}
+.imgSaie{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 30%;
+}
+.imgCukur{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 30%;
+}
+.imgCaraIhram {
+    
+    display: block;
+    margin: 0 auto;
+    width : 100% ; 
     height : 30%
 }
-*/
+.imgIhramWanita {
+    
+    display: block;
+    margin: 0 auto;
+    width : 100% ; 
+    height : 30%
+}
+
+/*.jam{
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+
+}*/
+
 .item.wrap, .item-content.wrap {
 white-space: normal;
 }
